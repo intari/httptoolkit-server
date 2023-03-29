@@ -13,14 +13,19 @@ export const ALLOWED_ORIGINS = IS_PROD_BUILD
         // whilst you have the app open. If they could (requires an HTTP mitm),
         // they would be able to start proxies & interceptors.
  	// intari hacks
-        /^https:\/\/httptoolkit-app\.viorsan\.com$/,
-        /^https:\/\/app\.httptoolkit\.tech$/,
+        // /^https:\/\/httptoolkit-app\.viorsan\.com$/,
+        // /^https:\/\/app\.httptoolkit\.tech$/,
+        /^https:\/\/httptoolkit-app\.viorsan\.com$/
+
     ]
     : [
         // Dev builds can use the main site, or local sites, even if those
         // use HTTP. Note that HTTP here could technically open you to the risk
         // above, but it'd require a DNS MitM too (to stop local.httptoolkit.tech
         // resolving to localhost and never hitting the network).
+//        /^https?:\/\/localhost(:\d+)?$/,
+//        /^http:\/\/local\.httptoolkit\.tech(:\d+)?$/,
+//        /^https:\/\/httptoolkit-app\.viorsan\.com$/,
         /^https?:\/\/localhost(:\d+)?$/,
         /^http:\/\/local\.httptoolkit\.tech(:\d+)?$/,
         /^https:\/\/httptoolkit-app\.viorsan\.com$/,
