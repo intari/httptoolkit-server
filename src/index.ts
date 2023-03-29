@@ -20,6 +20,8 @@ import { HttpToolkitServerApi } from './api-server';
 import { checkBrowserConfig } from './browsers';
 import { reportError } from './error-tracking';
 import { MOCKTTP_ALLOWED_ORIGINS } from './constants';
+import { IS_PROD_BUILD } from './constants';
+
 
 import { delay } from './util/promise';
 import { isErrorLike } from './util/error';
@@ -34,7 +36,7 @@ import {
 } from './interceptors/docker/docker-interception-services';
 import { clearWebExtensionConfig, updateWebExtensionConfig } from './webextension';
 
-const APP_NAME = "HTTP Toolkit";
+const APP_NAME = "HTTP Toolkit (Intari's mod)";
 
 async function generateHTTPSConfig(configPath: string) {
     const keyPath = path.join(configPath, 'ca.key');
@@ -215,4 +217,6 @@ export async function runHTK(options: {
 
     console.log('Server started in', Date.now() - standaloneSetupTime, 'ms');
     console.log('Total startup took', Date.now() - startTime, 'ms');
+    console.log('MOCKTTP_ALLOWED_ORIGINS is ', MOCKTTP_ALLOWED_ORIGINS);
+    console.log('IS_PROD_BUILD is ',IS_PROD_BUILD);
 }
