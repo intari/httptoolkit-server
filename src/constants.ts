@@ -15,8 +15,8 @@ export const ALLOWED_ORIGINS = IS_PROD_BUILD
  	// intari hacks
         // /^https:\/\/httptoolkit-app\.viorsan\.com$/,
         // /^https:\/\/app\.httptoolkit\.tech$/,
-	/^https:\/\/app\.httptoolkit\.tech?$/
-//        /^https:\/\/httptoolkit-app\.viorsan\.com$/,
+//	/^https:\/\/app\.httptoolkit\.tech?$/
+        /^https:\/\/httptoolkit-app\.viorsan\.com$/
 
     ]
     : [
