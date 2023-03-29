@@ -36,7 +36,7 @@ import {
 } from './interceptors/docker/docker-interception-services';
 import { clearWebExtensionConfig, updateWebExtensionConfig } from './webextension';
 
-const APP_NAME = "HTTP Toolkit (Intari's mod)";
+const APP_NAME = "HTTP Toolkit";
 
 async function generateHTTPSConfig(configPath: string) {
     const keyPath = path.join(configPath, 'ca.key');
